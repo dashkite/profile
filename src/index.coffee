@@ -1,17 +1,15 @@
+import Addison from "@dashkite/addison"
+
 Profile = 
 
-  save: ( profile ) ->
-    localStorage.setItem "profile", JSON.stringify profile
+  save: ( profile ) -> Addison.set "profile", profile
 
-  load: -> 
-    profile = JSON.parse localStorage.getItem "profile"
-    profile
+  load: -> Addison.get "profile"
 
-  update: ( f ) -> Profile.save f do Profile.load
+  update: ( f ) ->
+    Addision.set "profile", ( f Addision.get "profile" )
 
-
-  connected: ( context ) ->
-    ( localStorage.getItem "profile" )?
+  connected: ( context ) -> Addison.has "profile"
 
 export default Profile
 export { Profile }
