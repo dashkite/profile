@@ -1,15 +1,15 @@
-import Addison from "@dashkite/addison"
+import Storage from "@dashkite/storage"
 
 Profile = 
 
-  save: ( profile ) -> Addison.set "profile", profile
+  save: ( profile ) -> Storage.set "profile", profile
 
-  load: -> Addison.get "profile"
+  load: -> Storage.get "profile"
 
   update: ( f ) ->
-    Addision.set "profile", ( f Addision.get "profile" )
+    Storage.set "profile", ( f Addision.get "profile" )
 
-  connected: ( context ) -> Addison.has "profile"
+  connected: ( context ) -> Storage.has "profile"
 
 export default Profile
 export { Profile }

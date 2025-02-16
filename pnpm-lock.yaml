@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@dashkite/addison':
-        specifier: link:../addison
-        version: link:../addison
+      '@dashkite/storage':
+        specifier: link:../storage
+        version: link:../storage
     devDependencies:
       '@dashkite/amen':
         specifier: ^0.2.0

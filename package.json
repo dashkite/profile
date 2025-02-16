@@ -41,6 +41,6 @@
     "@dashkite/genie-module": "link:../genie-module"
   },
   "dependencies": {
-    "@dashkite/addison": "link:../addison"
+    "@dashkite/storage": "link:../storage"
   }
 }
