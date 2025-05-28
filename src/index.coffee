@@ -7,9 +7,14 @@ Profile =
   load: -> Storage.get "profile"
 
   update: ( f ) ->
-    Storage.set "profile", ( f Addision.get "profile" )
+    Storage.set "profile", ( f Storage.get "profile" )
 
-  connected: ( context ) -> Storage.has "profile"
+Object.defineProperty Profile, "connected",
+  get: ( context ) -> Storage.has "profile"
+
+# aliases
+Profile.get = Profile.load
+Profile.put = Profile.save
 
 export default Profile
 export { Profile }
