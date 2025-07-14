@@ -42,6 +42,6 @@
     "@dashkite/genie-release": "^0.2.8"
   },
   "dependencies": {
-    "@dashkite/storage": "link:../storage"
+    "@dashkite/storage": "0.3.0"
   }
 }
